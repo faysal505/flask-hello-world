@@ -1,11 +1,12 @@
 from flask import Flask
-
+import requests
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Hello, Faysal Sarker'
+    r = requests.get("https://www.w3schools.com/")
+    s = str(r.status_code)
+    return s
 
-@app.route('/about')
-def about():
-    return 'About'
+if __name__ == '__main__':
+    app.run(debug=True)
