@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Gmail Check</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1>Simple Tools to Check Gmail</h1>
+    <form action="/check" method="post">
+      <div class="form-group">
+        <label>Create By: Faysal</label>
+        <textarea class="form-control mx-auto" name="gmlist" rows="10"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+
+
+    <table class="table table-bordered">
+      {%for gmail in data%}
+        <tr>{{gmail | safe}}</tr>
+      {%endfor%}
+    </table>
+
+
+    
+
+    
+
+
+
+
+
+  </div>
+  <!-- Include Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
